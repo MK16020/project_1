@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:project_demo/constance.dart';
-import 'package:project_demo/pages/payPage.dart';
+import 'package:project_demo/pages/loginPage.dart';
 
 void main() {
   runApp(const MyApp());
@@ -20,7 +20,7 @@ class MyApp extends StatelessWidget {
         textTheme: Theme.of(context).textTheme.apply(bodyColor: kTextColor),
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
-      home: const PayPage(),
+      home: const LoginPage(),
     );
   }
 }
