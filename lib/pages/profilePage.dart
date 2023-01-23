@@ -14,6 +14,13 @@ class ProfilePage extends StatelessWidget {
             Form(
               child: Column(
                 children: [
+                  DecoratedBox(
+                    decoration: BoxDecoration(
+                      border: Border.all(color: Colors.red, width: 5),
+                      borderRadius: BorderRadius.circular(10),
+                    ),
+                    child: Image.asset('images/image10.jpg'),
+                  ),
                   TextFormField(
                     enableInteractiveSelection: false,
                     decoration: const InputDecoration(
@@ -27,7 +34,7 @@ class ProfilePage extends StatelessWidget {
                   ),
                   const SizedBox(height: 50),
                   ElevatedButton(
-                    child: const Text('Login'),
+                    child: const Text('Change Email'),
                     onPressed: () {
                       // Handle form submission
                     },

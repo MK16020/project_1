@@ -17,6 +17,7 @@ class ItemCard extends StatelessWidget {
           MaterialPageRoute(
             builder: (context) => ProductDetailPage(
               product: products[index],
+              index: index,
             ),
           )),
       child: Column(
@@ -27,7 +28,7 @@ class ItemCard extends StatelessWidget {
             height: 352,
             width: 234,
             decoration: BoxDecoration(
-              image: DecorationImage(image: AssetImage(product.image), fit: BoxFit.fitWidth),
+              image: DecorationImage(image: AssetImage(product.image), fit: BoxFit.cover),
             ),
           ),
           Text(
@@ -44,7 +45,9 @@ class ItemCard extends StatelessWidget {
           ),
           Container(
             padding: const EdgeInsets.all(8),
-            decoration: BoxDecoration(border: Border.all(width: 1, color: Colors.white)),
+            decoration: BoxDecoration(
+              border: Border.all(width: 1, color: Colors.white),
+            ),
             child: Text(product.size.toString()),
           ),
         ],
